@@ -20,7 +20,7 @@ report_html_out=
 build_dir=
 dashboard_url=
 colorful=true
-timeout=5m
+timeout=30m
 
 # Print usage
 usage () {
@@ -72,7 +72,7 @@ while getopts ":lo:hvs:j:r:d:w:b:u:ct:" opt; do
         b) build_dir=$OPTARG ;;
         u) dashboard_url=$OPTARG ;;
         c) colorful=false ;;
-        t) timeout=$OPTARG ;;
+        t) timeout=30m ;;
         *) echo Error: -$OPTARG ; usage; exit 1 ;;
     esac
 done
